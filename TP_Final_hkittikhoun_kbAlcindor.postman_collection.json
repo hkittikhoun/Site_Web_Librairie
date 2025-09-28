@@ -1,0 +1,304 @@
+{
+	"info": {
+		"_postman_id": "2b80c0e3-4978-4141-9a09-49856cbaa72c",
+		"name": "TP_Final_hkittikhoun_kbAlcindor",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42985306"
+	},
+	"item": [
+		{
+			"name": "/api/users",
+			"item": [
+				{
+					"name": "/:id/panier",
+					"item": [
+						{
+							"name": "Get Panier",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI1MDUyZmE1OWI5NjZiMjU0OGIzYWMiLCJlbWFpbCI6IjIxNTUxNjJAY21vbnRtb3JlbmN5LnFjLmNhIiwiaWF0IjoxNzQ3MjU2NjI5LCJleHAiOjE3NDcyNjAyMjl9.yM_wzFraDhuJsQeimu1LsCee-jMwiapkphf8oQ-J2Pc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{hostname}}/api/users/6825052fa59b966b2548b3ac/panier",
+									"host": [
+										"{{hostname}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"6825052fa59b966b2548b3ac",
+										"panier"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add au Panier",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI1MDUyZmE1OWI5NjZiMjU0OGIzYWMiLCJlbWFpbCI6IjIxNTUxNjJAY21vbnRtb3JlbmN5LnFjLmNhIiwiaWF0IjoxNzQ3MjU2NjI5LCJleHAiOjE3NDcyNjAyMjl9.yM_wzFraDhuJsQeimu1LsCee-jMwiapkphf8oQ-J2Pc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"mangaId\": \"6825060b08ffdf0436c4667a\",\r\n  \"quantity\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{hostname}}/api/users/6825052fa59b966b2548b3ac/panier",
+									"host": [
+										"{{hostname}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"6825052fa59b966b2548b3ac",
+										"panier"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Acheter Panier",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI1MDUyZmE1OWI5NjZiMjU0OGIzYWMiLCJlbWFpbCI6IjIxNTUxNjJAY21vbnRtb3JlbmN5LnFjLmNhIiwiaWF0IjoxNzQ3MjU2NjI5LCJleHAiOjE3NDcyNjAyMjl9.yM_wzFraDhuJsQeimu1LsCee-jMwiapkphf8oQ-J2Pc",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"mangaId\": \"6825060b08ffdf0436c4667a\",\r\n  \"quantity\": 2\r\n}"
+								},
+								"url": {
+									"raw": "{{hostname}}/api/users/6825052fa59b966b2548b3ac/panier/acheter",
+									"host": [
+										"{{hostname}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"6825052fa59b966b2548b3ac",
+										"panier",
+										"acheter"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Inscription (USER)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"HugoK\",\r\n    \"password\" : \"mdpHugoK\",\r\n    \"email\" : \"2155162@cmontmorency.qc.ca\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostname}}/api/users/register",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Connexion (USER) Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"2155162@cmontmorency.qc.ca\",\r\n    \"password\" : \"mdpHugoK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostname}}/api/users/login",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "/api/mangas",
+			"item": [
+				{
+					"name": "Add Manga",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODBiZDJmYWM5ZDFhZjBlNTU5MTc2Y2MiLCJlbWFpbCI6IjIxNTUxNjJAY21vbnRtb3JlbmN5LnFjLmNhIiwiaWF0IjoxNzQ1NjA1NDY1LCJleHAiOjE3NDU2MDkwNjV9.V15S0Jwtvez06abjJtzO9IqrBluaN1gX638FxsLPTb0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : \"j3\",\r\n    \"name\" : \"test\",\r\n    \"image\" : \"Stratégie\",\r\n    \"category\" : \"Stratégie\",\r\n    \"joueurs\" : \"2-4\",\r\n    \"duree\" : 15\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostname}}/api/mangas/",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"api",
+								"mangas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Mangas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostname}}/api/mangas/",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"api",
+								"mangas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Manga (ID)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostname}}/api/mangas/",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"api",
+								"mangas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MAJ Manga",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODBiZDJmYWM5ZDFhZjBlNTU5MTc2Y2MiLCJlbWFpbCI6IjIxNTUxNjJAY21vbnRtb3JlbmN5LnFjLmNhIiwiaWF0IjoxNzQ1NjA1NDY1LCJleHAiOjE3NDU2MDkwNjV9.V15S0Jwtvez06abjJtzO9IqrBluaN1gX638FxsLPTb0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Jeu Modifié\",\r\n    \"image\" : \"Famille\",\r\n    \"category\" : \"Famille\",\r\n    \"duree\" : 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostname}}/api/mangas/",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"api",
+								"mangas",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Supprimer Manga",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODI1MDUyZmE1OWI5NjZiMjU0OGIzYWMiLCJlbWFpbCI6IjIxNTUxNjJAY21vbnRtb3JlbmN5LnFjLmNhIiwiaWF0IjoxNzQ3MjU2NjI5LCJleHAiOjE3NDcyNjAyMjl9.yM_wzFraDhuJsQeimu1LsCee-jMwiapkphf8oQ-J2Pc",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{hostname}}/api/mangas/68250425a09b104a648b05ff",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"api",
+								"mangas",
+								"68250425a09b104a648b05ff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

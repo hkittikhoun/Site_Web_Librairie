@@ -1,0 +1,29 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Test 4a5
+      id: test-4a5
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Test 4a5
+        setup-command: npm install
+        command: npm run test
+        timeout: 2
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        TEST-4A5_RESULTS: "${{steps.test-4a5.outputs.result}}"
+      with:
+        runners: test-4a5

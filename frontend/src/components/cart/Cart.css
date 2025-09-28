@@ -1,0 +1,94 @@
+.lmj-cart {
+  color: white;
+  background-color: #800080;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 1120px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.lmj-cart h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.lmj-cart ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.lmj-cart ul div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background-color: #ffffff;
+  color: #333;
+  border-radius: 4px;
+  min-width: 150px;
+  text-align: center;
+}
+
+.lmj-cart button {
+  background-color: #ffffff;
+  color: #800080;
+  border: 1px solid #800080;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 16px;
+}
+
+.lmj-cart button:hover {
+  background-color: #6a006a;
+  color: white;
+}
+
+.lmj-cart-toggle-button {
+  background: none;
+  outline: none;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.lmj-cart-closed {
+  padding: 24px;
+  width: 320px;
+  background-color: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  text-align: center;
+}
+
+.lmj-cart-closed > button {
+  color: #800080;
+  background: none;
+  border: 1px solid #800080;
+  border-radius: 4px;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.lmj-cart-closed > button:hover {
+  background-color: #800080;
+  color: white;
+}
